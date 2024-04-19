@@ -60,6 +60,10 @@ public class UserServiceImpl implements UserService {
 		user.setLastName(userDto.getLastName());
 		user.setEmail(userDto.getEmail());
 
+		user = userRepository.save(user);
+
+		log.info("*** nouvelle valeur du user {}  ***", user.toString());
+
 		return modelMapper.map(user, UserDto.class);
 	}
 
