@@ -10,4 +10,12 @@ public interface ObjetService {
 	
 	List<ObjetDto> getObjetByUserId(Long userId);
 	
+	ObjetDto getObjetById(Long userId,Long objetId);
+	
+	ObjetDto updateObjetId(Long userId,Long objetId,ObjetDto objetDto);
+	
+	void deleteObjetById(Long userId,Long objetId);
+	
+	List<ObjetDto> getAllObjets();
+	
 }
